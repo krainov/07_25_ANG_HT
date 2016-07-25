@@ -1,0 +1,12 @@
+<ul class="container list-group">
+  <li class="row list-group-item" ng-repeat="mail in $ctrl.mails  | orderBy:'-date'" ng-click="active=!active">
+    <div class="col-xs-3">
+      <strong>{{mail.from}}</strong>
+    </div>
+    <div class="col-xs-6">
+      <div><strong>{{mail.subject}}</strong></div>
+      <div class="text" ng-if="active">{{mail.text}}</div>
+    </div>
+    <div class="col-xs-3">{{mail.date}}</div>
+  </li>
+</ul>
